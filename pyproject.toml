@@ -1,0 +1,27 @@
+[project]
+name = "payment-processor"
+version = "0.1.0"
+description = "Async payment processing service"
+authors = [
+    {name = "Sergey Pavlov",email = "grey13061989@gmail.com"}
+]
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "fastapi (>=0.162.0,<0.163.0)",
+    "uvicorn[standard] (>=0.54.0,<0.55.0)",
+    "pydantic-settings (>=2.16.1,<3.0.0)",
+    "sqlalchemy (>=2.0,<2.1)",
+    "asyncpg (>=0.32.0,<0.33.0)",
+    "alembic (>=1.20.1,<2.0.0)",
+    "uuid6 (>=2025.0.1,<2026.0.0)",
+    "faststream[cli,rabbit] (>=0.7.8,<0.8.0)",
+    "httpx (>=0.28.1,<0.29.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [{ include = "src" }]
